@@ -15,7 +15,7 @@ const SUPABASE_URL =
 // ===============================
 
 const SUPABASE_ANON_KEY =
-"sb_publishable_GtNASBYP5Nvp7wYmrTi7Zg_wdj_peW3...";
+"sb_publishable_GtNASBYP5Nvp7wYmrTi7Zg_wdj_peW3";
 
 // ===============================
 // CONNECT
