@@ -1,1 +1,1066 @@
+<!DOCTYPE html>
+<html lang="bn">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MNQ ERP | অ্যাডমিন ড্যাশবোর্ড</title>
+    <meta name="theme-color" content="#0B57D0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body class="dashboard-body">
+
+<div class="erp-layout">
+
+    <!-- =========================
+    SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-brand">
+
+            <img src="assets/img/logo.png" alt="MNQ Logo">
+
+            <div>
+                <h3>MNQ ERP</h3>
+                <span>মাদরাসা-ই নূরুল কুরআন</span>
+            </div>
+
+            <button type="button" id="sidebarClose" aria-label="Close Menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+        <div class="sidebar-user">
+
+            <div class="sidebar-avatar">
+                <i class="fa-solid fa-user-shield"></i>
+            </div>
+
+            <div>
+                <strong id="sidebarUserName">অ্যাডমিন</strong>
+                <span id="sidebarUserEmail">লোড হচ্ছে...</span>
+            </div>
+
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <div class="menu-title">মূল মেনু</div>
+
+            <a href="admin.html" class="menu-item active">
+                <i class="fa-solid fa-gauge-high"></i>
+                <span>ড্যাশবোর্ড</span>
+            </a>
+
+            <!-- Students -->
+
+            <div class="menu-title">শিক্ষার্থী ব্যবস্থাপনা</div>
+
+            <a href="students.html" class="menu-item">
+                <i class="fa-solid fa-user-graduate"></i>
+                <span>শিক্ষার্থীবৃন্দ</span>
+            </a>
+
+            <a href="application-form.html" class="menu-item">
+                <i class="fa-solid fa-file-pen"></i>
+                <span>ভর্তি আবেদন</span>
+            </a>
+
+            <a href="student-attendance.html" class="menu-item">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>শিক্ষার্থী হাজিরা</span>
+            </a>
+
+            <a href="fees.html" class="menu-item">
+                <i class="fa-solid fa-money-check-dollar"></i>
+                <span>শিক্ষার্থীদের বেতন</span>
+            </a>
+
+            <a href="student-reports.html" class="menu-item">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>শিক্ষার্থীদের রিপোর্ট</span>
+            </a>
+
+            <!-- Academic -->
+
+            <div class="menu-title">একাডেমিক</div>
+
+            <a href="subjects.html" class="menu-item">
+                <i class="fa-solid fa-book-open"></i>
+                <span>বিষয় ব্যবস্থাপনা</span>
+            </a>
+
+            <a href="exams.html" class="menu-item">
+                <i class="fa-solid fa-clipboard-question"></i>
+                <span>পরীক্ষা ব্যবস্থাপনা</span>
+            </a>
+
+            <a href="marks-entry.html" class="menu-item">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span>নম্বর এন্ট্রি</span>
+            </a>
+
+            <a href="marksheet.html" class="menu-item">
+                <i class="fa-solid fa-square-poll-vertical"></i>
+                <span>মার্কশিট</span>
+            </a>
+
+            <a href="results.html" class="menu-item">
+                <i class="fa-solid fa-ranking-star"></i>
+                <span>পরীক্ষার ফলাফল</span>
+            </a>
+
+            <!-- Cards -->
+
+            <div class="menu-title">কার্ড ও ডকুমেন্ট</div>
+
+            <a href="id-card.html" class="menu-item">
+                <i class="fa-solid fa-address-card"></i>
+                <span>আইডি কার্ড</span>
+            </a>
+
+            <a href="admit-card.html" class="menu-item">
+                <i class="fa-solid fa-id-card-clip"></i>
+                <span>এডমিট কার্ড</span>
+            </a>
+
+            <a href="character-certificate.html" class="menu-item">
+                <i class="fa-solid fa-certificate"></i>
+                <span>চারিত্রিক সনদ</span>
+            </a>
+
+            <a href="transfer-certificate.html" class="menu-item">
+                <i class="fa-solid fa-file-signature"></i>
+                <span>ট্রান্সফার সার্টিফিকেট</span>
+            </a>
+
+            <!-- Teachers -->
+
+            <div class="menu-title">শিক্ষক ব্যবস্থাপনা</div>
+
+            <a href="teachers.html" class="menu-item">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <span>শিক্ষকবৃন্দ</span>
+            </a>
+
+            <a href="teacher-attendance.html" class="menu-item">
+                <i class="fa-solid fa-user-check"></i>
+                <span>শিক্ষকদের হাজিরা</span>
+            </a>
+
+            <!-- Employees -->
+
+            <div class="menu-title">কর্মচারী ব্যবস্থাপনা</div>
+
+            <a href="employees.html" class="menu-item">
+                <i class="fa-solid fa-users-gear"></i>
+                <span>কর্মচারীবৃন্দ</span>
+            </a>
+
+            <a href="employee-attendance.html" class="menu-item">
+                <i class="fa-solid fa-clipboard-user"></i>
+                <span>কর্মচারীদের হাজিরা</span>
+            </a>
+
+            <!-- Salary -->
+
+            <a href="salary.html" class="menu-item">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <span>বেতন ব্যবস্থাপনা</span>
+            </a>
+
+            <a href="salary-slip.html" class="menu-item">
+                <i class="fa-solid fa-receipt"></i>
+                <span>বেতন স্লিপ</span>
+            </a>
+
+            <!-- Accounts -->
+
+            <div class="menu-title">হিসাব ব্যবস্থাপনা</div>
+
+            <a href="income.html" class="menu-item">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <span>দৈনন্দিন আয়</span>
+            </a>
+
+            <a href="expense.html" class="menu-item">
+                <i class="fa-solid fa-arrow-trend-down"></i>
+                <span>দৈনন্দিন ব্যয়</span>
+            </a>
+
+            <a href="fee-receipt.html" class="menu-item">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <span>রসিদ তৈরি</span>
+            </a>
+
+            <!-- Website -->
+
+            <div class="menu-title">ওয়েবসাইট ব্যবস্থাপনা</div>
+
+            <a href="notices.html" class="menu-item">
+                <i class="fa-solid fa-bullhorn"></i>
+                <span>নোটিশ বোর্ড</span>
+            </a>
+
+            <a href="gallery.html" class="menu-item">
+                <i class="fa-solid fa-images"></i>
+                <span>ফটো গ্যালারী</span>
+            </a>
+
+            <a href="videos.html" class="menu-item">
+                <i class="fa-solid fa-circle-play"></i>
+                <span>ভিডিও গ্যালারী</span>
+            </a>
+
+            <a href="downloads.html" class="menu-item">
+                <i class="fa-solid fa-cloud-arrow-down"></i>
+                <span>ফাইল ডাউনলোড</span>
+            </a>
+
+            <a href="complaints.html" class="menu-item">
+                <i class="fa-solid fa-message"></i>
+                <span>অভিযোগ বক্স</span>
+            </a>
+
+            <a href="sms.html" class="menu-item">
+                <i class="fa-solid fa-comment-sms"></i>
+                <span>এসএমএস সিস্টেম</span>
+            </a>
+
+            <!-- Settings -->
+
+            <div class="menu-title">সিস্টেম</div>
+
+            <a href="settings.html" class="menu-item">
+                <i class="fa-solid fa-gears"></i>
+                <span>সেটিংস</span>
+            </a>
+
+            <button type="button" class="menu-item logout-menu" id="sidebarLogout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>লগআউট</span>
+            </button>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- =========================
+    SIDEBAR OVERLAY
+    ========================== -->
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- =========================
+    MAIN AREA
+    ========================== -->
+
+    <main class="dashboard-main">
+
+        <!-- =========================
+        HEADER
+        ========================== -->
+
+        <header class="dashboard-header">
+
+            <div class="header-left">
+
+                <button type="button" id="sidebarToggle" class="header-icon-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="header-title">
+                    <h1>ড্যাশবোর্ড</h1>
+                    <p>মাদরাসা-ই নূরুল কুরআন ERP</p>
+                </div>
+
+            </div>
+
+
+            <div class="header-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="search"
+                    id="dashboardSearch"
+                    placeholder="শিক্ষার্থী, শিক্ষক, পেজ বা সেবা খুঁজুন..."
+                    autocomplete="off"
+                >
+
+                <div id="searchResults" class="dashboard-search-results"></div>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <div class="dashboard-clock">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <div>
+                        <span id="dashboardDate"></span>
+                        <strong id="dashboardTime"></strong>
+                    </div>
+
+                </div>
+
+                <button type="button" id="dashboardTheme" class="header-icon-btn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button type="button" class="header-icon-btn notification-btn">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span id="notificationCount">0</span>
+
+                </button>
+
+                <div class="admin-profile">
+
+                    <div class="admin-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div>
+                        <strong id="adminName">অ্যাডমিন</strong>
+                        <span>Administrator</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+        NOTICE TICKER
+        ========================== -->
+
+        <section class="dashboard-ticker">
+
+            <div class="ticker-label">
+
+                <i class="fa-solid fa-bullhorn"></i>
+
+                সর্বশেষ নোটিশ
+
+            </div>
+
+            <div class="ticker-track">
+
+                <div id="dashboardNoticeTicker">
+
+                    মাদরাসা-ই নূরুল কুরআনের ডিজিটাল ব্যবস্থাপনা সিস্টেমে স্বাগতম।
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+        DASHBOARD CONTENT
+        ========================== -->
+
+        <div class="dashboard-content">
+
+
+            <!-- Welcome -->
+
+            <section class="welcome-panel" data-aos="fade-up">
+
+                <div>
+
+                    <span class="welcome-label">
+
+                        <i class="fa-solid fa-mosque"></i>
+
+                        MNQ ERP
+
+                    </span>
+
+                    <h2>
+                        আসসালামু আলাইকুম,
+                        <span id="welcomeAdmin">অ্যাডমিন</span>
+                    </h2>
+
+                    <p>
+
+                        শিক্ষার্থী, শিক্ষক, কর্মচারী, পরীক্ষা, হিসাব,
+                        হাজিরা এবং ওয়েবসাইট পরিচালনা করুন একই ড্যাশবোর্ড থেকে।
+
+                    </p>
+
+                </div>
+
+                <div class="welcome-actions">
+
+                    <a href="students.html" class="btn btn-light">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        শিক্ষার্থী যোগ করুন
+
+                    </a>
+
+                    <a href="fee-receipt.html" class="btn btn-warning">
+
+                        <i class="fa-solid fa-receipt"></i>
+
+                        রসিদ তৈরি
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+            SUMMARY CARDS
+            ========================== -->
+
+            <section class="dashboard-summary">
+
+                <div class="summary-card" data-aos="fade-up">
+
+                    <div class="summary-icon student-icon">
+
+                        <i class="fa-solid fa-user-graduate"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>মোট শিক্ষার্থী</span>
+
+                        <h3 id="totalStudents">0</h3>
+
+                        <small>সকল সক্রিয় শিক্ষার্থী</small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card" data-aos="fade-up" data-aos-delay="80">
+
+                    <div class="summary-icon teacher-icon">
+
+                        <i class="fa-solid fa-chalkboard-user"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>মোট শিক্ষক</span>
+
+                        <h3 id="totalTeachers">0</h3>
+
+                        <small>শিক্ষক তালিকা</small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card" data-aos="fade-up" data-aos-delay="160">
+
+                    <div class="summary-icon employee-icon">
+
+                        <i class="fa-solid fa-users-gear"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>মোট কর্মচারী</span>
+
+                        <h3 id="totalEmployees">0</h3>
+
+                        <small>কর্মচারী তালিকা</small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card" data-aos="fade-up" data-aos-delay="240">
+
+                    <div class="summary-icon income-icon">
+
+                        <i class="fa-solid fa-sack-dollar"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>আজকের আয়</span>
+
+                        <h3>
+                            ৳ <span id="todayIncome">0</span>
+                        </h3>
+
+                        <small>আজকের মোট আদায়</small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card" data-aos="fade-up" data-aos-delay="320">
+
+                    <div class="summary-icon expense-icon">
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>আজকের ব্যয়</span>
+
+                        <h3>
+                            ৳ <span id="todayExpense">0</span>
+                        </h3>
+
+                        <small>আজকের মোট খরচ</small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card" data-aos="fade-up" data-aos-delay="400">
+
+                    <div class="summary-icon due-icon">
+
+                        <i class="fa-solid fa-hourglass-half"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>বকেয়া ফি</span>
+
+                        <h3>
+                            ৳ <span id="totalDue">0</span>
+                        </h3>
+
+                        <small>শিক্ষার্থীদের বকেয়া</small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+            QUICK ACTIONS
+            ========================== -->
+
+            <section class="dashboard-section">
+
+                <div class="dashboard-section-heading">
+
+                    <div>
+
+                        <h3>দ্রুত সেবা</h3>
+
+                        <p>প্রয়োজনীয় সেবায় দ্রুত প্রবেশ করুন</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-action-grid">
+
+                    <a href="students.html" class="quick-action">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        <span>শিক্ষার্থী</span>
+
+                    </a>
+
+
+                    <a href="teachers.html" class="quick-action">
+
+                        <i class="fa-solid fa-person-chalkboard"></i>
+
+                        <span>শিক্ষক</span>
+
+                    </a>
+
+
+                    <a href="employees.html" class="quick-action">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        <span>কর্মচারী</span>
+
+                    </a>
+
+
+                    <a href="student-attendance.html" class="quick-action">
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                        <span>হাজিরা</span>
+
+                    </a>
+
+
+                    <a href="fees.html" class="quick-action">
+
+                        <i class="fa-solid fa-money-bill-wave"></i>
+
+                        <span>ফি আদায়</span>
+
+                    </a>
+
+
+                    <a href="fee-receipt.html" class="quick-action">
+
+                        <i class="fa-solid fa-receipt"></i>
+
+                        <span>রসিদ</span>
+
+                    </a>
+
+
+                    <a href="admit-card.html" class="quick-action">
+
+                        <i class="fa-solid fa-id-card"></i>
+
+                        <span>এডমিট কার্ড</span>
+
+                    </a>
+
+
+                    <a href="marksheet.html" class="quick-action">
+
+                        <i class="fa-solid fa-file-lines"></i>
+
+                        <span>মার্কশিট</span>
+
+                    </a>
+
+
+                    <a href="id-card.html" class="quick-action">
+
+                        <i class="fa-solid fa-address-card"></i>
+
+                        <span>আইডি কার্ড</span>
+
+                    </a>
+
+
+                    <a href="notices.html" class="quick-action">
+
+                        <i class="fa-solid fa-bullhorn"></i>
+
+                        <span>নোটিশ</span>
+
+                    </a>
+
+
+                    <a href="income.html" class="quick-action">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <span>আয়</span>
+
+                    </a>
+
+
+                    <a href="expense.html" class="quick-action">
+
+                        <i class="fa-solid fa-chart-simple"></i>
+
+                        <span>ব্যয়</span>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+            ANALYTICS
+            ========================== -->
+
+            <section class="dashboard-two-column">
+
+                <div class="dashboard-panel" data-aos="fade-right">
+
+                    <div class="panel-heading">
+
+                        <div>
+
+                            <h3>মাসিক আয় ও ব্যয়</h3>
+
+                            <p>চলতি বছরের আর্থিক চিত্র</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="chart-container">
+
+                        <canvas id="financeChart"></canvas>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-panel" data-aos="fade-left">
+
+                    <div class="panel-heading">
+
+                        <div>
+
+                            <h3>আজকের হাজিরা</h3>
+
+                            <p>সামগ্রিক উপস্থিতির হিসাব</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="attendance-summary">
+
+                        <div>
+
+                            <span>শিক্ষার্থী উপস্থিত</span>
+
+                            <strong id="studentPresent">0</strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>শিক্ষার্থী অনুপস্থিত</span>
+
+                            <strong id="studentAbsent">0</strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>শিক্ষক উপস্থিত</span>
+
+                            <strong id="teacherPresent">0</strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>কর্মচারী উপস্থিত</span>
+
+                            <strong id="employeePresent">0</strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="attendance-chart-wrap">
+
+                        <canvas id="attendanceChart"></canvas>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+            RECENT STUDENTS + NOTICES
+            ========================== -->
+
+            <section class="dashboard-two-column">
+
+                <div class="dashboard-panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+
+                            <h3>সাম্প্রতিক শিক্ষার্থী</h3>
+
+                            <p>সর্বশেষ নিবন্ধিত শিক্ষার্থীদের তালিকা</p>
+
+                        </div>
+
+                        <a href="students.html">
+                            সব দেখুন
+                        </a>
+
+                    </div>
+
+
+                    <div class="table-responsive">
+
+                        <table class="dashboard-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>আইডি</th>
+
+                                    <th>নাম</th>
+
+                                    <th>বিভাগ</th>
+
+                                    <th>শ্রেণি</th>
+
+                                    <th>রোল</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="recentStudents">
+
+                                <tr>
+
+                                    <td colspan="5" class="text-center">
+
+                                        লোড হচ্ছে...
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+
+                            <h3>সর্বশেষ নোটিশ</h3>
+
+                            <p>প্রকাশিত নোটিশসমূহ</p>
+
+                        </div>
+
+                        <a href="notices.html">
+                            সব দেখুন
+                        </a>
+
+                    </div>
+
+                    <div id="recentNotices" class="recent-notice-list">
+
+                        <div class="empty-dashboard-data">
+
+                            নোটিশ লোড হচ্ছে...
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+            APPLICATIONS
+            ========================== -->
+
+            <section class="dashboard-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <h3>সাম্প্রতিক ভর্তি আবেদন</h3>
+
+                        <p>অনলাইন আবেদন ফরম থেকে প্রাপ্ত তথ্য</p>
+
+                    </div>
+
+                    <a href="application-form.html">
+                        আবেদন ব্যবস্থাপনা
+                    </a>
+
+                </div>
+
+
+                <div class="table-responsive">
+
+                    <table class="dashboard-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>আবেদন নং</th>
+
+                                <th>শিক্ষার্থীর নাম</th>
+
+                                <th>পিতার নাম</th>
+
+                                <th>মোবাইল</th>
+
+                                <th>বিভাগ</th>
+
+                                <th>শ্রেণি</th>
+
+                                <th>অবস্থা</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="recentApplications">
+
+                            <tr>
+
+                                <td colspan="7" class="text-center">
+
+                                    লোড হচ্ছে...
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+            ACCOUNT OVERVIEW
+            ========================== -->
+
+            <section class="dashboard-three-column">
+
+                <div class="mini-dashboard-panel">
+
+                    <i class="fa-solid fa-coins"></i>
+
+                    <span>এই মাসের আয়</span>
+
+                    <strong>
+                        ৳ <span id="monthlyIncome">0</span>
+                    </strong>
+
+                </div>
+
+
+                <div class="mini-dashboard-panel">
+
+                    <i class="fa-solid fa-money-bill-transfer"></i>
+
+                    <span>এই মাসের ব্যয়</span>
+
+                    <strong>
+                        ৳ <span id="monthlyExpense">0</span>
+                    </strong>
+
+                </div>
+
+
+                <div class="mini-dashboard-panel">
+
+                    <i class="fa-solid fa-scale-balanced"></i>
+
+                    <span>বর্তমান ব্যালেন্স</span>
+
+                    <strong>
+                        ৳ <span id="currentBalance">0</span>
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+            FOOTER
+            ========================== -->
+
+            <footer class="dashboard-footer">
+
+                <span>
+                    © 2026 মাদরাসা-ই নূরুল কুরআন
+                </span>
+
+                <span>
+                    MNQ ERP v2.0
+                </span>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- Scripts -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="assets/js/supabase.js"></script>
+
+<script src="assets/js/admin.js"></script>
+
+</body>
+
+</html>
